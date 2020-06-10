@@ -13,7 +13,8 @@
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"dbaeumer.vscode-eslint",
-		"ritwickdey.liveserver"
+		"ritwickdey.liveserver",
+		"esbenp.prettier-vscode"
 	],
 
 	//Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -25,5 +26,6 @@
 	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "node"
 }
+
 
 

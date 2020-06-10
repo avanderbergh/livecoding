@@ -1,6 +1,18 @@
+table {
+  background-color: #00918e;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+}
+
 td {
-    border: solid red 2px;
-    padding: 1em;
-    background-color: yellow;
-    color: blue;
+  background-color: #ffdc34;
+  color: #110133;
+  height: 20px;
+  width: 20px;
+}
+
+.form-control {
+  display: grid;
+  grid-template-columns: 5rem 3rem;
 }
