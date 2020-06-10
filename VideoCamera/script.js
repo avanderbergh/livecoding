@@ -3,7 +3,7 @@ const oldTimeyButton = document.querySelector("#old-timey-button");
 const hueSlider = document.querySelector("#hue-slider");
 const effectButton = document.querySelector("#effect-button");
 
-navigator.getUserMedia({video: true, audio: false}
+navigator.getUserMedia({ video: true, audio: false }
     , stream => {
         video.srcObject = stream;
         video.addEventListener("loadedmetadata", () => video.play())
@@ -17,19 +17,21 @@ oldTimeyButton.addEventListener("click", e => {
     }, 3000)
 });
 
-hueSlider.addEventListener("change", e=> {
+hueSlider.addEventListener("change", e => {
     console.log(hueSlider.value);
     video.style.filter = `hue-rotate(${hueSlider.value}deg)`;
 });
 
-const changeHue = hue => {
-    video.style.filter = `hue-rotate(${hue}deg)`;
-    return hue++;
-}
-
+let myEffect = null;
 effectButton.addEventListener("click", e => {
-    changeHue(0);
-    while (hue < 360) {
-        changeHue()
+    if (myEffect) {
+        clearInterval(myEffect);
+        myEffect = null;
+    } else {
+        let hue = 0
+        myEffect = setInterval(() => {
+            video.style.filter = `hue-rotate(${hue++}deg)`;
+            hue = hue >= 360 ? 0 : hue;
+        }, 100)
     }
 })
