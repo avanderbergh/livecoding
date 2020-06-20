@@ -14,7 +14,9 @@
 	"extensions": [
 		"dbaeumer.vscode-eslint",
 		"ritwickdey.liveserver",
-		"esbenp.prettier-vscode"
+		"esbenp.prettier-vscode",
+		"wallabyjs.quokka-vscode",
+		"burkeholland.simple-react-snippets"
 	],
 
 	//Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -26,6 +28,8 @@
 	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "node"
 }
+
+
 
 
 

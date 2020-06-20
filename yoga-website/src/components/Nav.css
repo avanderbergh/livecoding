@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt&display=swap');
+
+nav {
+    padding: 0 .2rem;
+    display: grid;
+    grid-template-columns: 2rem 1fr 2rem;
+    align-items: baseline;
+}
+
+.logo {
+    font-family: 'Rokkitt', serif;
+    margin: 0;
+}
+
+.logo a {
+    text-decoration: none;
+    color: unset;
+}
+
+nav > ul > li {
+    list-style: none;
+    margin-right: 1rem;
+}
+
+nav > button {
+    background: none;
+    border: none;
+}
+nav ul a {
+    text-decoration: none;
+    color: unset;
+}
