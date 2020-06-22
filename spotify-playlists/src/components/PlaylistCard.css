@@ -1,0 +1,9 @@
+.playlist-card {
+  border: solid black 1px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.playlist-card img {
+  width: 100%;
+}
