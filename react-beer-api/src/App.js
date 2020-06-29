@@ -17,13 +17,15 @@ function App() {
 					<Route exact path="/">
 						<Home />
 					</Route>
-					<Route path="/beer" exact>
+					<Route exact path="/beer">
 						<AllBeers />
 					</Route>
 					<Route path="/random" exact>
 						<RandomBeer />
 					</Route>
+					
 					<Route path="/beer/:id" component={Beer} />
+
 				</Switch>
 			</div>
 		</BrowserRouter>
