@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import {appid} from "../keys"
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField'
+import { withStyles } from '@material-ui/core';
+
+import { appid } from "../keys"
 
 class Weather extends Component {
     constructor(props) {
@@ -16,10 +20,19 @@ class Weather extends Component {
     }
 
     render() {
+
+        const CustomTextField = withStyles({
+            root: {
+                '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                        borderRadius: `20px`,
+                    },
+                },
+            },
+        })(TextField);
         return (
-            <div>
-                <h1>Weather</h1>
-                <p>{JSON.stringify(this.state.weather)}</p>
+            <div style={{ margin: 100 }}>
+                <TextField variant="outlined" />
             </div>
         );
     }
